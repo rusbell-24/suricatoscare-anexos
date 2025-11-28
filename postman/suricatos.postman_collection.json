@@ -1,0 +1,429 @@
+{
+	"info": {
+		"_postman_id": "621bc5c3-4789-4298-bac9-2934f03b82dc",
+		"name": "suricatos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2681808"
+	},
+	"item": [
+		{
+			"name": "reservas",
+			"item": [
+				{
+					"name": "consultar reserva",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ctxm5j0azc.execute-api.us-east-2.amazonaws.com/prod/reservations/3",
+							"protocol": "https",
+							"host": [
+								"ctxm5j0azc",
+								"execute-api",
+								"us-east-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"prod",
+								"reservations",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "compeltar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"stars\":5,\n    \"experience\": \"on Time\",\n    \"comments\": \"Excelente servicio\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ctxm5j0azc.execute-api.us-east-2.amazonaws.com/prod/reservations/3",
+							"protocol": "https",
+							"host": [
+								"ctxm5j0azc",
+								"execute-api",
+								"us-east-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"prod",
+								"reservations",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar reservas por id - CARE",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ctxm5j0azc.execute-api.us-east-2.amazonaws.com/prod/reservations/user/515bf5b0-e071-702d-ebfe-c4d861b1513f/CARE",
+							"protocol": "https",
+							"host": [
+								"ctxm5j0azc",
+								"execute-api",
+								"us-east-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"prod",
+								"reservations",
+								"user",
+								"515bf5b0-e071-702d-ebfe-c4d861b1513f",
+								"CARE"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar reservas por id PARENT",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ctxm5j0azc.execute-api.us-east-2.amazonaws.com/prod/reservations/user/41bb6520-7091-703e-5b14-9dd520891eb4/PARENT",
+							"protocol": "https",
+							"host": [
+								"ctxm5j0azc",
+								"execute-api",
+								"us-east-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"prod",
+								"reservations",
+								"user",
+								"41bb6520-7091-703e-5b14-9dd520891eb4",
+								"PARENT"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear reserva",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"addressService\": \"Bogotá\",\n    \"startDate\": \"2025-10-26T09:32:12\",\n    \"endDate\": \"2025-10-26T09:32:12\",\n    \"price\": \"15000\",\n    \"idCare\": \"515bf5b0-e071-702d-ebfe-c4d861b1513f\",\n    \"idParent\": \"41bb6520-7091-703e-5b14-9dd520891eb4\",\n    \"comments\": \"Reserva 3\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ctxm5j0azc.execute-api.us-east-2.amazonaws.com/prod/reservations",
+							"protocol": "https",
+							"host": [
+								"ctxm5j0azc",
+								"execute-api",
+								"us-east-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"prod",
+								"reservations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cancelar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ctxm5j0azc.execute-api.us-east-2.amazonaws.com/prod/reservations/2",
+							"protocol": "https",
+							"host": [
+								"ctxm5j0azc",
+								"execute-api",
+								"us-east-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"prod",
+								"reservations",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "usuarios",
+			"item": [
+				{
+					"name": "Consulta usuario",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ctxm5j0azc.execute-api.us-east-2.amazonaws.com/prod/users/515bf5b0-e071-702d-ebfe-c4d861b1513f",
+							"protocol": "https",
+							"host": [
+								"ctxm5j0azc",
+								"execute-api",
+								"us-east-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"prod",
+								"users",
+								"515bf5b0-e071-702d-ebfe-c4d861b1513f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar usuarios por role",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ctxm5j0azc.execute-api.us-east-2.amazonaws.com/prod/users/role/CARE",
+							"protocol": "https",
+							"host": [
+								"ctxm5j0azc",
+								"execute-api",
+								"us-east-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"prod",
+								"users",
+								"role",
+								"CARE"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar usuario",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"duvan@gmail.com\",\n    \"password\": \"Miprueba1234%\",\n    \"name\": \"Duvan Gutierrez\",\n    \"role\": \"PARENT\",\n    \"documentNumber\": 234434323,\n    \"phone\": \"3212323344\",\n    \"birthDate\": \"02-10-1993\",\n    \"address\": \"bogotá\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ctxm5j0azc.execute-api.us-east-2.amazonaws.com/prod/users/register",
+							"protocol": "https",
+							"host": [
+								"ctxm5j0azc",
+								"execute-api",
+								"us-east-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"prod",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar cuidador",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"kelly@gmail.com\",\n    \"password\": \"Miprueba1234%\",\n    \"name\": \"Kelly Perez\",\n    \"role\": \"CARE\",\n    \"documentNumber\": 1234,\n    \"phone\": \"123456\",\n    \"birthDate\": \"02-10-1993\",\n    \"address\": \"bogotá\",\n    \"yearsExperience\": 5,\n    \"detailProfile\": \"Soy cuidadora con licenciatura en cuidado infantil, con 5 años de experiencia \"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ctxm5j0azc.execute-api.us-east-2.amazonaws.com/prod/users/register",
+							"protocol": "https",
+							"host": [
+								"ctxm5j0azc",
+								"execute-api",
+								"us-east-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"prod",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
